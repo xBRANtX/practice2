@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Система CSS-переменных */
+:root {
+    --primary-color: #2A254B;
+    --secondary-color: #726E8D;
+    --light-bg: #F9F9F9;
+    --white: #FFFFFF;
+    --font-main: 'Inter', system-ui, sans-serif;
+    --transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    background: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.header__icon {
+    margin-left: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.header__icon:hover {
+    transform: scale(1.1);
+}
+
+/* --- NAVIGATION --- */
+.nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    list-style: none;
+    padding: 20px 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+    transition: var(--transition);
+    padding-bottom: 4px;
+}
+
+/* Интерактивность элементов  */
+.nav__link:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.nav__link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--white);
+    min-height: 500px;
+    margin: 70px;
+    padding: 70px;
+}
+
+.hero__content {
+    padding: 60px;
+    flex: 1;
+}
+
+.hero__title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.hero__text {
+    margin-top: 200px;
+    font-size: 18px;
+    color: #f9f9f9;
+    opacity: 0.8;
+}
+
+.hero__image {
+    width: 50%;
+    object-fit: cover;
+}
+
+/* --- КНОПКИ --- */
+.button {
+    display: inline-block;
+    padding: 16px 32px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.button--secondary {
+    background: rgba(249, 249, 249, 0.15);
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #1e1b36;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* --- FEATURES SECTION --- */
+.features {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.features__intro {
+    font-size: 24px;
+    margin-bottom: 36px;
+}
+
+.features__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: left;
+    flex: 1;
+}
+
+.feature-card__title {
+    margin: 16px 0 8px;
+    font-size: 20px;
+}
+
+.feature-card__text {
+    color: var(--secondary-color);
+}
+
+/* --- PRODUCTS SECTION --- */
+.products {
+    padding: 80px;
+}
+
+.products__title {
+    font-size: 32px;
+    margin-bottom: 33px;
+}
+
+.products__grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card__image {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.card__price {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+/* --- SUBSCRIBE SECTION --- */
+.subscribe {
+    background: var(--light-bg);
+    padding: 80px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.subscribe__title {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.subscribe__input {
+    padding: 16px;
+    width: 350px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.subscribe__text {
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: var(--secondary-color);
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__social-icon {
+    margin-left: 20px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
