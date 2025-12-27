@@ -5,6 +5,7 @@
 
 ## Используемые технологии
 - HTML5
+- CSS
 
 ## Ссылки
 - [Публичная страница на GitHub Pages](https://xBRANtX.github.io/practice2/)
