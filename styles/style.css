@@ -182,7 +182,8 @@ body {
 }
 
 .products__grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin-bottom: 40px;
 }
@@ -246,4 +247,94 @@ body {
     margin-left: 20px;
     cursor: pointer;
     filter: brightness(0) invert(1);
+}
+
+/* --- GRID SECTION (Practice 4) --- */
+.content-grid {
+  padding: 80px;
+}
+
+.content-grid__title {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.content-grid__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.content-card {
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+}
+
+/* --- MASONRY SECTION (Practice 4) --- */
+.masonry-grid {
+  padding: 80px;
+  background: var(--light-bg);
+}
+
+.masonry-grid__title {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.masonry-grid__container {
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease;
+}
+
+.masonry-item:hover {
+  transform: translateY(-4px);
+}
+
+.masonry-item--short { padding-bottom: 16px; }
+.masonry-item--tall { padding-bottom: 64px; }
+.masonry-item--very-tall { padding-bottom: 110px; }
+
+@media (max-width: 1024px) {
+  .hero { margin: 32px; padding: 40px; }
+  .features { padding: 48px; }
+  .products { padding: 48px; }
+  .content-grid { padding: 48px; }
+  .masonry-grid { padding: 48px; }
+
+  .productsgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .masonry-grid__container { column-count: 2; }
+}
+
+@media (max-width: 720px) {
+  .navlist { gap: 18px; flex-wrap: wrap; }
+  .hero { flex-direction: column; }
+  .heroimage { width: 100%; }
+
+  .featuresgrid { flex-direction: column; }
+  .productsgrid { grid-template-columns: 1fr; }
+  .masonry-grid__container { column-count: 1; }
+}
+
+@media (max-width: 320px) {
+  .header { padding: 12px 14px; }
+  .hero { margin: 14px; padding: 18px; }
+  .subscribeinput { width: 100%; }
 }
